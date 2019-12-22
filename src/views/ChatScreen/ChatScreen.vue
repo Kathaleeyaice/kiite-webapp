@@ -42,6 +42,7 @@ export default {
     message
   },
   mounted () {
+    this.authValid()
     this.value = this.getPosPercentage()
     console.log(this.value)
     this.$root.socket.on('receive_chat', (data) => {
@@ -97,6 +98,12 @@ export default {
       })
       this.textInput = ''
       this.messages.push(messageData)
+    },
+    authValid () {
+      if (!localStorage.token) {
+        this.$router.push({ path: '/login' })
+        return 0
+      }
     }
   }
 }

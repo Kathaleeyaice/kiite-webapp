@@ -78,6 +78,7 @@ export default {
     }
   },
   mounted () {
+    this.authValid()
     this.$root.socket.emit('connection', 'connected')
     this.$root.socket.emit('find_chat', {
       type: this.$route.query.userType,
@@ -111,6 +112,12 @@ export default {
     })
   },
   methods: {
+    authValid () {
+      if (!localStorage.token) {
+        this.$router.push({ path: '/login' })
+        return 0
+      }
+    },
     getPosPercentage (posCount, negCount) {
       let posPercentage = posCount / (posCount + negCount) * 100
       if (isNaN(posPercentage)) {

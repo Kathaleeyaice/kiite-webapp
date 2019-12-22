@@ -10,11 +10,10 @@
 export default {
   name: 'app',
   mounted () {
-    this.authValid()
   },
   methods: {
     authValid () {
-      if (!localStorage.token && !this.$route.name !== 'Landing') {
+      if (!localStorage.token) {
         this.$router.push({ path: '/login' })
         return 0
       }

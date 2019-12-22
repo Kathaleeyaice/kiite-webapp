@@ -27,6 +27,17 @@ export default {
   },
   props: {
     msg: String
+  },
+  mounted () {
+    this.authValid()
+  },
+  methods: {
+    authValid () {
+      if (!localStorage.token) {
+        this.$router.push({ path: '/login' })
+        return 0
+      }
+    }
   }
 }
 </script>

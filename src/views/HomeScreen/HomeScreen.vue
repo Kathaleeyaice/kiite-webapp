@@ -63,12 +63,19 @@ export default {
     }
   },
   mounted () {
+    this.authValid()
     this.fectStatus()
     this.$root.socket.on('timeline', (data) => {
       this.newStatus = true
     })
   },
   methods: {
+    authValid () {
+      if (!localStorage.token) {
+        this.$router.push({ path: '/login' })
+        return 0
+      }
+    },
     fectStatus () {
       this.isLoading = true
       fetch('https://kiite-webservice.herokuapp.com/timeline', {
