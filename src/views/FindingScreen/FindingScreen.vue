@@ -153,6 +153,9 @@ export default {
         return require('./assets/penguin.png')
       }
     }
+  },
+  socketDisconnect () {
+    this.$root.socket.disconnect()
   }
 }
 

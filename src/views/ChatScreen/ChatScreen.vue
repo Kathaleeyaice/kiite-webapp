@@ -57,6 +57,9 @@ export default {
       this.value = this.getPosPercentage()
     })
   },
+  destroyed () {
+    this.$root.socket.disconnect()
+  },
   methods: {
     getPosPercentage () {
       let posCount = 0

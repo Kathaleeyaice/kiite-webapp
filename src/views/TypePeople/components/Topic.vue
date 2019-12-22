@@ -14,11 +14,11 @@
                 <img src="../assets/Love.png" class="iconTopic">
                 <div class="Button">Love</div>
              </router-link>
-             <router-link :to="`/finding/finding?userType=${this.userType}&topic=love`" class="buttonBox">
+             <router-link :to="`/finding/finding?userType=${this.userType}&topic=education`" class="buttonBox">
                 <img src="../assets/Education.png" class="iconTopic">
                 <div class="Button">Education</div>
              </router-link>
-             <router-link :to="`/finding/finding?userType=${this.userType}&topic=love`" class="buttonBox">
+             <router-link :to="`/finding/finding?userType=${this.userType}&topic=general`" class="buttonBox">
                 <img src="../assets/General.png" class="iconTopic">
                 <div class="Button">General</div>
              </router-link>
