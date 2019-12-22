@@ -71,7 +71,7 @@ export default {
   methods: {
     fectStatus () {
       this.isLoading = true
-      fetch('https://kiite-application.appspot.com/timeline', {
+      fetch('https://kiite-webservice.herokuapp.com/timeline', {
         method: 'GET',
         headers: {
           Accept: 'application/json',

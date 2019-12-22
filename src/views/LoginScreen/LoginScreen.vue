@@ -70,7 +70,7 @@ export default {
         return
       }
       this.isLoading = true
-      fetch('https://kiite-application.appspot.com/auth/login', {
+      fetch('https://kiite-webservice.herokuapp.com/auth/login', {
         method: 'POST',
         headers: {
           Accept: 'application/json',

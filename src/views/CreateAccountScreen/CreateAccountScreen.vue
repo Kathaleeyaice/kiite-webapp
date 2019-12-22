@@ -53,7 +53,7 @@ export default {
         return false
       }
       this.isLoading = true
-      fetch('https://kiite-application.appspot.com/auth/register', {
+      fetch('https://kiite-webservice.herokuapp.com/auth/register', {
         method: 'POST',
         headers: {
           Accept: 'application/json',

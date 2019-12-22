@@ -37,7 +37,7 @@ export default {
   methods: {
     sendPost () {
       this.isLoading = true
-      fetch('https://kiite-application.appspot.com/timeline', {
+      fetch('https://kiite-webservice.herokuapp.com/timeline', {
         method: 'POST',
         headers: {
           Accept: 'application/json',

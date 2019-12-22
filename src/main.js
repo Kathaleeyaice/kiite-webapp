@@ -26,7 +26,7 @@ new Vue({
   render: h => h(App),
   data: {
     isLoading: true,
-    socket: io('https://kiite-application.appspot.com')
+    socket: io('https://kiite-webservice.herokuapp.com')
   },
   mounted () {
     setTimeout(() => {
