@@ -88,7 +88,7 @@ export default {
             localStorage.token = response.data.token
             localStorage.username = response.data.username
             localStorage.role = response.data.role
-            this.$router.push({ path: '/messenger/type' })
+            this.$router.push({ path: '/home' })
           } else if (response.status === 401) {
             this.isLoading = false
             alert('Wrong username or password')
@@ -105,7 +105,7 @@ export default {
     },
     authValid () {
       if (localStorage.token) {
-        this.$router.push({ path: '/messenger/type' })
+        this.$router.push({ path: '/home' })
       }
     }
   }

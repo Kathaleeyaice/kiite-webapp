@@ -21,7 +21,7 @@
       <div class="borderbox" v-for="msg in message" v-bind:key="msg.name">
         <div class="contentBox">
           <div id="imageContainer">
-            <img class="iconTimeline" :src="require('./assets/'+msg.icon.iconType+'.png')"/>
+            <img class="iconTimeline" v-bind:style="{ 'background-color':  msg.icon.iconColor }" :src="require('./assets/'+msg.icon.iconType+'.png')"/>
           </div>
           <div class="post-content">
             {{msg.text}}
