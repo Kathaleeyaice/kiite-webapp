@@ -2,7 +2,6 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Landing from '../views/LandingScreen/LandingScreen.vue'
 import LoginScreen from '../views/LoginScreen/LoginScreen.vue'
-import ForgotPassScreen from '../views/ForgotPassScreen/ForgotPassScreen.vue'
 import CreateAccountScreen from '../views/CreateAccountScreen/CreateAccountScreen.vue'
 import termOfServiceScreen from '../views/termOfServiceScreen/termOfServiceScreen.vue'
 import HomeScreen from '../views/HomeScreen/HomeScreen.vue'
@@ -31,11 +30,6 @@ const routes = [
     path: '/login',
     name: 'LoginScreen',
     component: LoginScreen
-  },
-  {
-    path: '/forgotpassword',
-    name: 'ForgotPassScreen',
-    component: ForgotPassScreen
   },
   {
     path: '/createaccout',

@@ -60,7 +60,6 @@ export default {
     width: 22.48875vh;
     height: 22.48875vh;
     border-radius: 50%;
-    background-color: #BFBFBF;
     margin: auto;
 }
 .nameProfile{
