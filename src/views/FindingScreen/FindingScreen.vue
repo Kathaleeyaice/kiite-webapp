@@ -5,7 +5,7 @@
         <!-- ทำดิสคอนเนค socket -->
         <router-link to="/messenger/type"><img src="./assets/back.png" class="iconBack"></router-link>
       </div>
-      <div v-if="isLoading">
+      <div v-if="isLoading" class="FindingBox">
         <img src="./assets/finding.png" class="imgFinding" id="imgFinding">
         <div class="Text">Finding User</div>
         <div v-if="user === 'user'">
@@ -42,7 +42,7 @@
           </div>
           <div class="textStart">Starting Message ...</div>
         </div>
-        <div v-if="!isShow">
+        <div v-if="!isShow" class="FindingBox">
           <img src="./assets/match.png" class="imgFinding">
           <div class="TextMatch">Matched!</div>
         </div>
@@ -185,11 +185,15 @@ export default {
     position: absolute;
     margin-left: 2.69865067466vh;
   }
+  .FindingBox{
+    margin: auto;
+    width: 26.0869565217vh;
+    top: 24.4377811094vh;
+  }
   .imgFinding{
     position: absolute;
     width: 26.0869565217vh;
     top: 24.4377811094vh;
-    left: 15.1424287856vh;
   }
   #imgFinding{
     animation-name: spin;
@@ -209,21 +213,27 @@ export default {
     position: absolute;
     font-size: 2.0989vh;
     font-weight: bold;
-    left: 22.3388305847vh;
+    text-align: center;
     top: 55.9220389805vh;
+    margin: auto;
+    width: 26.0869565217vh;
 }
 .TextMatch{
    position: absolute;
     font-size: 2.0989vh;
     font-weight: bold;
-    left: 24.287856072vh;
+    text-align: center;
     top: 55.9220389805vh;
+    margin: auto;
+    width: 26.0869565217vh;
 }
 .Queue{
   position: absolute;
   font-size: 1.79910044978vh;
-  left: 21.5892053973vh;
+  text-align: center;
   top: 59.2203898051vh;
+  margin: auto;
+    width: 26.0869565217vh;
 }
   .ShowStatic{
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -251,6 +261,7 @@ export default {
     width: 22.48875vh;
     height: 22.48875vh;
     margin-left:11.769115vh;
+    background-color: coral;
 }
 .matchName{
     text-align: center;
